@@ -17,7 +17,7 @@ const connect = () => {
 app.use(morgan("tiny"));
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
-// app.set("views", path.resolve(__dirname, "./views"));
+app.set("views", path.resolve(__dirname, "./views"));
 
 //assets
 app.use("/css", express.static(path.resolve(__dirname, "./assets/css")));
