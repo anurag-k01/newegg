@@ -2,7 +2,27 @@
 <%- include("includes/_navigationBar") -%>
 <!-- /Header -->
 
+  <!-- Caraousal -->
+
+<%- include("includes/_caraousal") -%>
+
+
+    <!-- Caraousal -->
+
+
+    <!-- RENDER PRODUCTS -->
+    <h1>TODAY'S BEST DEALS</h1>
+<% prod.forEach(function (prod){ %>
+<h1> <%= prod.prod_name %> </h1>
+
+<%})%>
+
+
+<!-- RENDER PRODUCTS -->
+
+
 <!-- Footer -->
 <%- include("includes/_footer") -%>
 
 <!-- /Footer -->
+<script src="../routes/bDeals.router.js"></script>
