@@ -13,6 +13,248 @@ a {
   text-decoration: none;
   color: black;
 }
-.container {
-  margin-left: 63px;
+.containner {
+  display: flex;
+  margin-left: 42px;
+}
+.row {
+  width: 100%;
+}
+.coll {
+  background-color: #f6f8fe;
+  background-image: none;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin: 20px;
+  height: 240px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+
+  padding: 20px;
+  max-width: calc(100% / 3 - 20px);
+}
+a:hover {
+  color: black;
+}
+.text_width {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  max-width: 100%;
+  box-sizing: border-box;
+  line-height: 1.375;
+  word-wrap: break-word;
+  word-break: break-word;
+
+  text-decoration: none;
+  overflow: hidden;
+  max-height: 2.8em;
+  -webkit-line-clamp: 2;
+}
+.tag-list {
+  margin-top: -20px;
+  left: 0;
+  padding-right: 5px;
+  border-radius: 8px 0 0 0;
+
+  z-index: 4;
+  overflow: hidden;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -20px;
+}
+.tag-text {
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px 0;
+}
+.tag {
+  transform: skewX(-10deg);
+  border-radius: 4px 0;
+  margin: 0 3px 5px -1px;
+  background-color: #f69904;
+  color: #6b3200;
+  position: relative;
+  align-items: center;
+  padding: 0 6px;
+  display: inline-flex;
+}
+.prod_info {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 30px;
+}
+body {
+  font-family: "Open Sans", sans-serif, Helvetica, Arial;
+}
+.prodAlign {
+  margin-top: 20px;
+}
+.prodImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.dealsSectionTitle {
+  font-style: normal;
+  font-weight: 900;
+  margin-left: 30px;
+  color: #09144f;
+}
+.section1 {
+  display: grid;
+  grid-template-columns: repeat(3, 10%);
+  grid-gap: 30px;
+}
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding:40px 100px
+}
+.images {
+  height: 150px;
+  mix-blend-mode: darken;
+  position: relative;
+  z-index: 1;
+  display: block;
+
+  max-width: 300px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.images:hover {
+  cursor: pointer;
+}
+.text_details {
+  width: 100%;
+}
+.tabstore{
+  position: relative;
+  margin: 0 auto;
+   
+}
+.menu-body {
+display: none;
+    position: absolute;
+    z-index: 5;
+    white-space: normal;
+      
+}
+.tabstore>.menu-body {
+    display: block;
+    left: 20px;
+}
+.listContainer{
+  position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+        background-color: #fff;
+        opacity: 0.85;
+    color: #212121;
+    white-space: normal;
+    z-index: 1;
+        background-image: linear-gradient(
+200deg
+,rgba(255,255,255,0) 0,rgb(233, 233, 233) 100%);
+}
+
+.innerlistContainer{
+  position: relative;
+    
+    display: flex;
+}
+.tabstore .menu1 {
+    width: 240px;
+        flex-direction: column;
+     position: relative;
+   
+    display: flex;
+    box-sizing: border-box;
+}
+li{
+list-style-type:none;
+    margin: 0;
+    padding:0;
+    position: relative;
+}
+ .carousel-control-prev-icon {
+  margin-left: 423px;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+}
+.carousel-control-next-icon {
+ 
+    
+    width: 4rem;
+    height: 4rem;
+}
+.hero-banner-gradient {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    background-image: linear-gradient(
+180deg
+,rgba(255,255,255,0) 0,rgb(255, 255, 255) 100%);
+    pointer-events: none;
+}
+small{
+  color:gray
+}
+.seeAll{
+  display:flex;
+  justify-content: center;
+    margin-top: 20px;
+    padding: 0 30px;
+}
+.btn-primary{
+  
+    background-color: #154790;
+    padding-left: 24px;
+    padding-right: 24px;
+    
+    border-radius: 52px;
+
+}
+.categoriesDiv{
+  padding:64px 0
+}
+.categ{
+    background-color:rgb(247,247,247);
+}
+.roww{
+  display:grid;
+grid-template-columns: repeat(3,32%);
+grid-gap:30px
+
+}
+.imgCard{
+  height:260px;
+  width:470px;
+   border-radius: 10px;
+}
+.imgCard:hover{
+  cursor: pointer
+}
+.cardss{
+  padding-left:20px;
+  padding-right:20px;
 }

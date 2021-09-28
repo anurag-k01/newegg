@@ -6,19 +6,23 @@ const morgan = require("morgan");
 const path = require("path");
 const app = express();
 const connect = () => {
-  return mongoose.connect("mongodb://localhost:27017/newegg", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: true,
-  });
+  return mongoose.connect(
+    "mongodb+srv://dbAnurag:anurag321@backendwithfrontend.yedoc.mongodb.net/newegg?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: true,
+    }
+  );
 };
-app.use(express.json())
+app.use(express.json());
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "./views"));
 app.use(bodyparser.urlencoded({ extended: true }));
-const prod_model = require("./models/bestDeals.js")
-const homepage_prod_control = require("./routes/bDeals.router")
+const prod_model = require("./models/bestDeals.js");
+const homePage = require("./routes/homepage.router");
+const homepage_prod_control = require("./routes/bDeals.router");
 
 //assets
 app.use("/css", express.static(path.resolve(__dirname, "./assets/css")));
@@ -27,11 +31,10 @@ app.use(
   "/scripts",
   express.static(path.resolve(__dirname, "./assets/scripts"))
 );
-app.use("/best",homepage_prod_control)
-app.get("/", (req, res) => {
-  res.render("home");
-});
+
+app.use("/global/in-en/", homePage); //this is working
+
 app.listen(PORT, async function () {
   await connect();
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}/global/in-en/`);
 });
