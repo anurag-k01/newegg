@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: normal;
+  align-items: center;
+  transition: 0.6s;
+  background-color: rgb(0, 40, 58);
+  padding: 0px 3px;
+  z-index: 100000;
+  height: 100px;
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+  color: white;
+  margin-right: 10px;
+}
+.logOrRegist {
+  color: white !important;
+  padding: 28px 7px 23px 5px;
+  display: flex;
+  margin: 10px -137px 4px -93px;
+}
+.sticky {
+  padding: 4px 0px;
+  height: 50px;
+  background-color: rgb(0, 40, 58);
+}
+header.sticky .searchDiv {
+  height: 28px;
+  width: 1004px;
+  transition: 0.6s;
+}
+header.sticky .logo {
+  height: 34px;
+  width: 80px;
+  transition: 0.6s;
+}
+header .newEggLogo {
+  position: relative;
+  font-weight: 700;
+
+  text-decoration: none;
+  font-size: 2em;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-size: 144px;
+  transition: 0.6s;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background: rgb(0, 40, 58); */
+  background-size: cover;
+}
+
+header.sticky .newEggLogo,
+.sticky ul li a {
+  color: white;
+}
+
+.line {
+  width: 20px;
+  height: 4px;
+  background: white;
+  display: block;
+}
+
+.line:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.threedot {
+  position: relative;
+  padding: 20px;
+  margin-left: -10px;
+}
+.searchDiv {
+  position: relative;
+  align-items: center;
+  width: 961px;
+  height: 28px;
+  display: flex;
+}
+.search_main {
+  padding: 20px;
+  padding-top: 26px;
+  display: inline-flex;
+  position: relative;
+}
+
+#search {
+  border: none;
+  font-family: "Roboto", "Noto", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: white;
+  max-width: 100%;
+  width: 100%;
+  padding: 5px;
+}
+#search:focus {
+  outline: none;
+  border: 1px solid #1f80e0;
+}
+.navbar {
+  display: flex;
+
+  padding-left: 30px;
+}
+.logo {
+  margin-top: 4px;
+  height: 61px;
+  width: 133px;
+}
+.search_btn1 {
+  height: 28px;
+  padding: 5px;
+}
+.search_btn {
+  height: 36px;
+  width: 43px;
+  background: white;
+  border: 1px solid rgb(0, 40, 58);
+}
+.siginNReguy {
+  width: 300px;
+  color: white;
+}
+.welcomeDiv {
+  width: 120px;
+  margin-left: 10px;
+}
+.welcomeText {
+  color: white;
+  margin-left: -29px;
+}
+.cartIcon {
+  color: white;
+  margin-left: 10px;
+}
+.cartIcon p {
+  color: gray;
+  font-size: 13px;
+  margin-top: 31px;
+}
+.cartSize {
+  color: white !important;
+  margin-top: 13px !important;
+}
+.fa-shopping-cart {
+  top: 2px;
+  font-size: 28px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  margin-left: -46px;
+  margin-top: 55px;
+  position: absolute;
+}

@@ -23,7 +23,9 @@ app.use(bodyparser.urlencoded({ extended: true }));
 const prod_model = require("./models/bestDeals.js");
 const homePage = require("./routes/homepage.router");
 const homepage_prod_control = require("./routes/bDeals.router");
-
+const individualPage = require("./routes/individual");
+const userController = require("./routes/user.router");
+const productController = require("./routes/products.router");
 //assets
 app.use("/css", express.static(path.resolve(__dirname, "./assets/css")));
 app.use("/img", express.static(path.resolve(__dirname, "./assets/img")));
@@ -31,8 +33,16 @@ app.use(
   "/scripts",
   express.static(path.resolve(__dirname, "./assets/scripts"))
 );
+app.use(
+  "/includes",
+  express.static(path.resolve(__dirname, "./views/includes"))
+);
 
 app.use("/global/in-en/", homePage); //this is working
+
+app.use("", individualPage);
+app.use("/global/in-en/", userController);
+app.use("/global/in-en/shop", productController);
 
 app.listen(PORT, async function () {
   await connect();

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newegg.com Shopping Cart</title>
+    <link
+      rel="shortcut icon"
+      href="https://c1.neweggimages.com/WebResource/ngm/newegg.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+ <link rel="stylesheet" href="/css/style.css">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<body>
+    <%- include("includes/_navigationBar") -%>
+    <br>
+    
+    <div class="layout">
+      <div class="left">
+        <div class="cartQuantityDiv">
+          <h3>Shopping Cart (<%= products.length %> items)</h3>
+
+          <p>MOVE ALL TO WISH LIST</p>
+          <P>REMOVE ALL</P>
+        </div>
+        <br>
+        <div class="importantNotifications">
+          <p>IMPORTANT NOTIFICATIONS</p>
+          <small
+            >Some shipments may experience unexpected elays due to carrier and
+            local customs clearance.</small
+          >
+        </div>
+        <br>
+
+        <% for(let i=0; i<products.length; i++){  %>
+         
+          <a href="">
+<div class="cartItems">
+<div>
+  <img src="<%= products[i].prod_img %>" class="cartImages" alt=""></div>
+  <div class="title"><h6><%= products[i].prod_name %></h6></div>
+
+  <div class="money"><h5><%= products[i].price %></h5></div>
+
+</div>
+<% } %></a>
+      </div>
+      <div class="right">
+<div>
+  <h5>Summary</h5>
+  <div>
+<p>Items(s) <%= sum %></p>
+<br>
+<br>
+<br>
+<br>
+<h3>Est. Total: <%= sum %></h3>
+  </div>
+</div>
+
+     
+    </div>
+    </div>
+
+    <div class="cartFooter">
+        <div class="note">
+            <p>Please note that for products shipped to destinations outside of the United States and Canada, any manufacturer warranty may not be valid; manufacturer service options may not be available; product manuals, instructions, and safety warnings may not be in destination country languages; the products (and accompanying materials) may not be designed in accordance with destination country standards, specifications, and labeling requirements; and the products may not conform to destination country voltage and other electrical standards (requiring use of an adapter or converter if appropriate). You are responsible for assuring that the product can be lawfully imported to the destination country. When ordering from Newegg.com, you (or the recipient, if the shipment is not directed to your address) are the importer of record and must comply with all laws and regulations of the destination country.</p>
+        </div>
+        <div class="footr">
+            <small>Newegg.com |</small>
+   <small>Policy & Agreement | </small>
+   <small>Privacy Policy | </small>
+   <small>Manage Cookie | </small>
+   <p>2000-2021 Newegg International Inc. All rights reserved.</p>
+        </div>
+    </div>
+   
+  </body>
+</html>

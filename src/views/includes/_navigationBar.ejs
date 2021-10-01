@@ -1,103 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <!-- Header -->
-    <nav class="navbar navbar-light bg-light">
-      <img
-        class="navbar-brand logo"
-        src="https://c1.neweggimages.com/WebResource/Themes/Nest/logos/Newegg_full_color_logo_RGB.SVG"
-        alt=""
-      />
-      <form class="form-inline">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
-      </form>
-      <div class="container">
-        <div class="row">
-          <a href=""> <h6>Free Shipping</h6></a>
-
-          <a href=""><h6>Today's Best Deals</h6></a>
-          <a href=""><h6>RX 6600 XT</h6></a>
-          <a href=""><h6>RX 6800</h6></a>
-          <a href=""><h6>RTX 3080 LHR</h6></a>
-          <a href=""><h6>Nintendo Consoles & Accessories</h6></a>
-          <a href=""><h6>Mining Motherboards</h6></a>
-          <a href=""><h6>In-Stock Video Cards</h6></a>
-          <a href=""><h6>Sell on Newegg</h6></a>
-          <a href=""><h6>Build your pc</h6></a>
-        </div>
+<header>
+      <div class="threedot">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
       </div>
-    </nav>
+      <a href="http://localhost:3000/global/in-en/" class="newEggLogo"
+        ><img
+          src="https://c1.neweggimages.com/WebResource/Themes/Nest/logos/logo_424x210.png"
+          class="logo1"
+          alt=""
+        />
+      </a>
+      <ul>
+        <li>
+          <div class="search_main">
+            <div class="searchDiv">
+              <input
+                type="text"
+                id="search"
+                placeholder="Keywords, Model # or Item #"
+              />
+              <button onclick="getResults()" class="search_btn">
+                <img
+                  class="search_btn1"
+                  src="https://cdn-icons-png.flaticon.com/512/482/482631.png"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">
+            <div class="logOrRegist">  
+                <div>
+                  <a href="http://localhost:3000/global/in-en/signin">
+ <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                </div>
+    <div class="welcomeDiv">
+         <small class="welcomeText">Welcome</small></div>
+         <div style="margin-left: -29px">
+     <p class="siginNReguy">Sign in Register</p></div>
 
-    <!-- HEader -->
+</a>
+              </div>
+        </li>
+        <li>
+          <a href="http://localhost:3000/global/in-en/shop/cart">
+          <div class="cartIcon">
+           <i class="fas fa-shopping-cart"></i>
+          <p>₹ <%= sum %></p>
+          <p class="cartSize"><%= products.length %> Item</p>
+          </div>
+        </li>
+     </a>
+      </ul>
+    </header>
 
    
-    </div>
-  <div
-      id="carouselExampleControls"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://promotions.newegg.com/international/21-2049/1920x660.jpg"
-            class="d-block w-100 "
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://promotions.newegg.com/international/21-2051/1920x660.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="https://promotions.newegg.com/international/21-2050/1920x660.jpg"
-            class="d-block w-100"
-            alt="..."
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= getOne.prod_name %></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://c1.neweggimages.com/WebResource/ngm/newegg.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/css/indvidual.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+   
+    <header>
+      <div class="threedot">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <a href="http://localhost:3000/global/in-en/" class="newEggLogo"
+        ><img
+          src="https://c1.neweggimages.com/WebResource/Themes/Nest/logos/logo_424x210.png"
+          class="logo"
+          alt=""
+        />
+      </a>
+      <ul>
+        <li>
+          <div class="search_main">
+            <div class="searchDiv">
+              <input
+                type="text"
+                id="search"
+                placeholder="Keywords, Model # or Item #"
+              />
+              <button onclick="getResults()" class="search_btn">
+                <img
+                  class="search_btn1"
+                  src="https://cdn-icons-png.flaticon.com/512/482/482631.png"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#"></a>
+            <div class="logOrRegist">
+                <div>
+ <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+                </div>
+    <div style="width:120px;">
+         <small>Welcome</small>
+     <p style="width:100px;">Sign in Register</p></div>
+
+
+              
+            </div>
+          </a>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a>dfdf</li>
+      </ul>
+    </header>
+
+    <section class="banner">
+        <div class="Pagination">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+           
+            <br>
+           
+        </div>
+        <div class="container-fluid">
+<div class="threeSection">
+<div class="col1">
+    <div class="sec">
+    <!-- <small><%= getOne._id %></small> -->
+<img src="<%= getOne.prod_img %>" id="prodImg"class="indv_img" alt="">
+</div>
+
+</div>
+<div class="col2">
+      <div class="sec2">
+    <h1 class="prod_title" id="nameProd"><%= getOne.prod_name %></h1>
+<small>In stock</small>
+<p><small>Ships from United States</small></small></p>
+</div>
+
+</div>
+<div class="col3">
+ <div class="sec3">
+   <small>Sold by:Newegg</small>
+   <p>
+<a href="" class="shipped-by-newegg"></a>
+   </p>
+   <br>
+   
+  <small id="discount"><%= getOne.discount %></small>
+<p><small>Estimated VAT inclusive </small></p>
+<br>
+<h2 id="pricee"><%= getOne.price %></h2>
+<div class="updateAndAdd">
+    <div class="updateButton"></div>
+    <div class="addToCart">
+      
+          
+     <a href="">
+            <form action="" method="post" onsubmit="addToCart(event)">
+              <input type="hidden" id="prodId" value="<%= getOne._id %>">
+              <input type="hidden" id="name" value="<%= getOne.prod_name %>">
+              <input type="hidden" id="prodPrice" value="<%= getOne.price %>">
+              <input type="hidden" id="prodDiscount" value="<%= getOne.discount %>">
+              <input type="hidden" id="imgProd" value="<%= getOne.prod_img %>">
+         
+              <button class="cartBtn"  id="cartButton"  type="submit">ADD TO CART ></button></form>
+</a>
+
+    </div>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+     </div>
+    </section>
+ 
+
+    <script src="/scripts/navbar.js"></script>
+
+  </body>
+</html>
+<script>
+ function addToCart(e) {
+  
+ e.preventDefault();
+    let formdata = {
+    
+     prod_name: document.getElementById("name").value,
+     price: document.getElementById("prodPrice").value,
+      discount: document.getElementById("prodDiscount").value,
+    prod_img: document.getElementById("imgProd").value,
+    };
+    formdata = JSON.stringify(formdata);
+    console.log({ formdata });
+    fetch("http://localhost:3000/global/in-en/shop/cart", {
+      method: "POST",
+      body: formdata,
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        console.log("res");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+     
+window.location.href = "http://localhost:3000/global/in-en/shop/cart"
+}
+
+  </script>

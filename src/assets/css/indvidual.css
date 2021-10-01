@@ -1,0 +1,74 @@
+.sec {
+  /* border: 1px solid black; */
+  width: 600px;
+  padding: 33px 5px 0px 70px;
+  height: 600px;
+}
+.sec2 {
+  /* border: 1px solid black; */
+  width: 600px;
+  padding: 8px 8px 6px 13px;
+  height: 600px;
+}
+.sec3 {
+  /* border: 1px solid black; */
+  width: 318px;
+  padding: 10px 11px 5px 20px;
+  height: 600px;
+}
+.indv_img {
+  height: 300px;
+}
+.threeSection {
+  display: flex;
+}
+.prod_title {
+  font-size: 27px;
+}
+.shipped-by-newegg {
+  display: inline-block;
+  width: 141px;
+  height: 14px;
+  overflow: hidden;
+  background: url(https://c1.neweggimages.com/WebResource/Themes/Nest/images/logos/SBN_Full_Light.png)
+    no-repeat 0 0;
+  background-size: 100%;
+  font-size: 0;
+  text-indent: -999em;
+  vertical-align: middle;
+  color: #222;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.updateAndAdd {
+  display: flex;
+}
+.updateButton {
+  border: 1px solid black;
+  height: 20px;
+  width: 20px;
+}
+.cartBtn {
+  color: black;
+  border-color: #c60;
+  background: #ffa33a;
+
+  border-radius: 5px;
+  padding: 10px 1em;
+  width: 100%;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  margin-left: 20px;
+  color: #222;
+  font: 700 14px/1 Open Sans Condensed, Arial Narrow, Helvetica Narrow, arial,
+    helvetica, sans-serif;
+  font-stretch: condensed;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+}
+.cartBtn:hover {
+  background: #f39834;
+  color: #222;
+}
