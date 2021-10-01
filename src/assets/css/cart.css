@@ -70,3 +70,43 @@ body {
 .title {
   width: 50%;
 }
+.cartBtn {
+  color: black;
+  border-color: #c60;
+  background: #ffa33a;
+
+  border-radius: 5px;
+  padding: 10px 1em;
+  width: 100%;
+  outline: none;
+  border: 1px solid #d9d9d9;
+  margin-left: 20px;
+  color: #222;
+  font: 700 14px/1 Open Sans Condensed, Arial Narrow, Helvetica Narrow, arial,
+    helvetica, sans-serif;
+  font-stretch: condensed;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+}
+.cartBtn:hover {
+  background: #f39834;
+  color: #222;
+}
+.payment {
+  margin: 20px;
+  width: 100%;
+}
+.methods {
+  display: flex;
+}
+
+.netbanking,
+.Cash {
+  border: 1px solid gray;
+  margin: 20px;
+  padding: 29px 29px 29px 29px;
+}
+.methods :hover {
+  border: 2px solid rgb(210, 100, 32);
+}

@@ -252,3 +252,21 @@ small {
 .middle {
   margin-top: 100px;
 }
+.footer {
+  background-color: rgb(10, 24, 92);
+  color: white;
+}
+.footer {
+  padding: 21px 51px 11px 55px;
+}
+.footer p {
+  font-size: 12px;
+}
+.footer h5 {
+  font-size: 15px;
+  font-weight: 700;
+}
+.last {
+  height: 100px;
+  padding: 4px 4px 5px 14px;
+}

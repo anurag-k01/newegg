@@ -22,15 +22,14 @@
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <body>
     <%- include("includes/_navigationBar") -%>
-    <br>
+  
     
     <div class="layout">
       <div class="left">
         <div class="cartQuantityDiv">
-          <h3>Shopping Cart (<%= products.length %> items)</h3>
+          <h5>Checkout(<%= products.length %> Items)</h5>
 
-          <p>MOVE ALL TO WISH LIST</p>
-          <P>REMOVE ALL</P>
+          
         </div>
         <br>
         <div class="importantNotifications">
@@ -41,31 +40,37 @@
           >
         </div>
         <br>
-
-        <% for(let i=0; i<products.length; i++){  %>
-         
-          <a href="">
-<div class="cartItems">
-<div>
-  <img src="<%= products[i].prod_img %>" class="cartImages" alt=""></div>
-  <div class="title"><h6><%= products[i].prod_name %></h6></div>
-
-  <div class="money"><h5><%= products[i].price %></h5></div>
+<div class="payment">
+    <h4>PAYMENT</h4>
+    <div>
+        <h5>How do you want to pay?</h5>
+        <div class="methods">
+            <button onclick="sucess()" class="netbanking" id="online">CREDIT/DEBIT CARD</button>
+            <button onclick="sucess()" class="Cash" id="deliv">Cash on Delivery</button>
+        </div>
+    </div>
 
 </div>
-<% } %></a>
+        
+         
+
       </div>
       <div class="right">
+          <br>
+          <br>
+          <br>
+          <br>
+
 <div>
-  <h5>Summary</h5>
+  <h5>Order Summary</h5>
   <div>
 <p>Items(s) <%= sum %></p>
 <p>Warranty & Service:</p>
 <p>Delivery:</p>
 <p>Est.Duty & VAT</p>
 <br>
-<h3>Est. Total: <%= sum %></h3>
-<button class="cartBtn"  id="cartButton"  onclick="payment()">SECURE CHECKOUT </button>
+<h4>Total: ₹ <%= sum %></h4>
+
   </div>
 </div>
 
@@ -89,8 +94,7 @@
   </body>
 </html>
 <script>
-  function payment(){
-    
-    window.location.href="http://localhost:3000/checkout"
-  }
+function sucess(){
+    window.location.href = "http://localhost:3000/global/in-en/sucess"
+}
 </script>

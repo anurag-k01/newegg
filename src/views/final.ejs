@@ -6,5 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <style>
+    #sucess_page {
+      width: 450px;
+      margin: auto;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div id="sucess_page">
+      <img src="https://i.stack.imgur.com/ZRTb6.gif" alt="" />
+      <h1>Order Sucessfully Placed</h1>
+      <h1>Thank You & Keep Shopping</h1>
+      <button onclick="home()">Home</button>
+    </div>
+  </body>
 </html>
+<script>
+  function home() {
+    window.location.href = "http://localhost:3000/global/in-en/";
+  }
+</script>
